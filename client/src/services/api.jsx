@@ -57,6 +57,19 @@ export const fetchPost = async (userId) => {
   }
 };
 
+// export const fetchPost = async () => {
+//   try {
+//     console.log("started...");
+//     const response = await API.get('/posts/allposts');
+//     console.log("fetched...");
+//     return response.data;
+//   } catch (error) {
+//     console.error(`Error fetching post with id :`, error);
+//     throw error;
+//   }
+// };
+
+
 export const createPost = async (postData) => {
   try {
     const response = await API.post('/posts', postData);
@@ -68,15 +81,15 @@ export const createPost = async (postData) => {
 };
 
 
-export const updatePost = async (id, postData) => {
-  try {
-    const response = await API.put(`/posts/${id}`, postData);
-    return response.data;
-  } catch (error) {
-    console.error(`Error updating post with id ${id}:`, error);
-    throw error;
-  }
-};
+// export const updatePost = async (id, postData) => {
+//   try {
+//     const response = await API.put(`/posts/${id}`, postData);
+//     return response.data;
+//   } catch (error) {
+//     console.error(`Error updating post with id ${id}:`, error);
+//     throw error;
+//   }
+// };
 //delete a post
 
 export const deletePost = async (id, userId) => {
@@ -99,15 +112,15 @@ export const deletePost = async (id, userId) => {
 //   }
 // };
 
-export const likePost = async (id, userId) => {
-  try {
-    const response = await API.put(`/posts/${id}/like`, { userId });
-    return response.data;
-  } catch (error) {
-    console.error(`Error liking post with id ${id}:`, error);
-    throw error;
-  }
-};
+// export const likePost = async (id, userId) => {
+//   try {
+//     const response = await API.put(`/posts/${id}/like`, { userId });
+//     return response.data;
+//   } catch (error) {
+//     console.error(`Error liking post with id ${id}:`, error);
+//     throw error;
+//   }
+// };
 
 // User endpoints
 export const fetchUser = async (id) => {
@@ -120,15 +133,15 @@ export const fetchUser = async (id) => {
   }
 };
 
-export const updateUser = async (id, userData) => {
-  try {
-    const response = await API.put(`/users/${id}`, userData);
-    return response.data;
-  } catch (error) {
-    console.error(`Error updating user with id ${id}:`, error);
-    throw error;
-  }
-};
+// export const updateUser = async (id, userData) => {
+//   try {
+//     const response = await API.put(`/users/${id}`, userData);
+//     return response.data;
+//   } catch (error) {
+//     console.error(`Error updating user with id ${id}:`, error);
+//     throw error;
+//   }
+// };
 
 export const deleteUser = async (id, userId) => {
   try {
@@ -140,22 +153,22 @@ export const deleteUser = async (id, userId) => {
   }
 };
 
-export const followUser = async (id, userId) => {
-  try {
-    const response = await API.put(`/users/${id}/follow`, { userId });
-    return response.data;
-  } catch (error) {
-    console.error(`Error following user with id ${id}:`, error);
-    throw error;
-  }
-};
+// export const followUser = async (id, userId) => {
+//   try {
+//     const response = await API.put(`/users/${id}/follow`, { userId });
+//     return response.data;
+//   } catch (error) {
+//     console.error(`Error following user with id ${id}:`, error);
+//     throw error;
+//   }
+// };
 
-export const unfollowUser = async (id, userId) => {
-  try {
-    const response = await API.put(`/users/${id}/unfollow`, { userId });
-    return response.data;
-  } catch (error) {
-    console.error(`Error unfollowing user with id ${id}:`, error);
-    throw error;
-  }
-};
+// export const unfollowUser = async (id, userId) => {
+//   try {
+//     const response = await API.put(`/users/${id}/unfollow`, { userId });
+//     return response.data;
+//   } catch (error) {
+//     console.error(`Error unfollowing user with id ${id}:`, error);
+//     throw error;
+//   }
+// };

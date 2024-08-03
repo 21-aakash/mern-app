@@ -6,13 +6,14 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import userRoute from '../routes/users.js'
-import auth from '..//routes/auth.js'
+import auth from '../routes/auth.js'
 import postRoute from '../routes/post.js'
 import cors from 'cors';
 
 
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL);
+console.log("mongo connected!")
 
 
 //middleware

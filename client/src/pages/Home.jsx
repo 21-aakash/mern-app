@@ -20,7 +20,10 @@ const Home = () => {
   };
 
 
-  const username = email.replace('@gmail.com', '');
+  //const username = email.replace('@gmail.com', '');
+  const username = email;
+
+
 const styles={
 
   main: {
